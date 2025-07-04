@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  <header>
+    <div class="logo">😊</div>
+    <nav>
+      <button>Home</button>
+      <button>Our Profile</button>
+      <button>Portfolio</button>
+      <button>Message Us</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <h2>Hi Deri, Welcome To Website</h2>
+      <p>Ini adalah website latihan pertama</p>
+      <div class="placeholder">1366×578</div>
+    </section>
+
+    <section class="headquarters">
+      <h3>Our Headquarter</h3>
+      <div class="locations">
+        <div class="circle">Jakarta</div>
+        <div class="circle">Bandung</div>
+        <div class="circle">Surabaya</div>
+      </div>
+    </section>
+
+    <section class="message">
+      <div class="form">
+        <h3>Message Us</h3>
+        <form id="messageForm">
+          <label>Nama: <input type="text" id="name" required /></label><br />
+          <label>Tanggal Lahir: <input type="date" id="dob" required /></label><br />
+          <label>Jenis Kelamin:
+            <input type="radio" name="gender" value="Laki-Laki" required /> Laki-Laki
+            <input type="radio" name="gender" value="Perempuan" /> Perempuan
+          </label><br />
+          <label>Pesan: <br />
+            <textarea id="message" required></textarea>
+          </label><br />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="output" id="outputBox">
+        <!-- Hasil submit akan muncul di sini -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Created By Deri Muhammad Khasani
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
