@@ -2,63 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Website</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
 </head>
-<body>
-  <header>
-    <div class="logo">😊</div>
-    <nav>
-      <button>Home</button>
-      <button>Our Profile</button>
-      <button>Portfolio</button>
-      <button>Message Us</button>
+<body class="bg-gradient-to-br from-orange-100 via-orange-200 to-yellow-100 text-gray-800 font-sans text-base scroll-smooth">
+
+
+  <!-- Wrapper -->
+  <div class="max-w-screen-lg mx-auto shadow-lg border border-gray-300 mt-4">
+
+    <!-- Fake Browser Bar -->
+    <div class="flex items-center border-b border-gray-300 px-4 py-2 bg-gray-100">
+      <div class="logo">🎐🍊🍐🫑🥝🍍🍌🥑🍏</div>
+      <div class="ml-4 font-semibold">Selamat Datang  Pecinta Buah</div>
+      <div class="logo">🎐🍊🍐🫑🥝🍍🍌🥑🍏</div>
+      <div class="ml-auto flex items-center space-x-2 text-sm text-gray-600">
+        <i class="fas fa-lock"></i>
+        <span>www.buahsegar.id</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="flex justify-center gap-4 py-4 bg-white sticky top-0 z-10 border-b border-gray-200">
+      <a href="#beranda" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100">Beranda</a>
+      <a href="#profil" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100">Produk Kita</a>
+      <a href="#portfolio" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100">Portfolio</a>
+      <a href="#message" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100">Kirim Pesan</a>
     </nav>
-  </header>
 
-  <main>
-    <section class="welcome">
-      <h2>Hi Deri, Welcome To Website</h2>
-      <p>Ini adalah website latihan pertama</p>
-      <div class="placeholder">1366×578</div>
+    <!-- Home -->
+    <section id="beranda" class="px-6 py-10 text-center">
+      <h1 class="text-2xl font-bold mb-2 text-red-600"">Halo <span id="welcomeName">Pecinta Buah</span>, Selamat Datang di BuahSegar.id!</h1>
+      <p class="text-lg text-black-600">ini adalah website latihan pertama.</p>
     </section>
 
-    <section class="headquarters">
-      <h3>Our Headquarter</h3>
-      <div class="locations">
-        <div class="circle">Jakarta</div>
-        <div class="circle">Bandung</div>
-        <div class="circle">Surabaya</div>
+    <!-- Profile -->
+    <section id="profil" class="bg-gray-50 py-10 px-6">
+      <h2 class="text-xl font-bold mb-4 text-center text-red-600">Profil</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+           <img src="assets/images/Grow a Garden.jpg" alt="Company Banner" class="w-full rounded shadow" /> 
+        </div>
+        <div class="space-y-4">
+          <p><b>Tentang Kita:</b> Kami adalah BuahSegar.id, toko buah online yang menyediakan berbagai pilihan buah lokal dan impor dengan kualitas terbaik. Kami percaya bahwa hidup sehat dimulai dari makanan alami, segar, dan bergizi.</p>
+          <p><b>Visi:</b> Menjadi toko buah terpercaya di Indonesia yang menyediakan buah-buahan berkualitas tinggi dengan pelayanan yang cepat, aman, dan ramah.</p>
+          <p><b>Misi:</b> Menyediakan platform pemesanan buah online yang mudah dan efisien.</p>
+        </div>
       </div>
     </section>
 
-    <section class="message">
-      <div class="form">
-        <h3>Message Us</h3>
-        <form id="messageForm">
-          <label>Nama: <input type="text" id="name" required /></label><br />
-          <label>Tanggal Lahir: <input type="date" id="dob" required /></label><br />
-          <label>Jenis Kelamin:
-            <input type="radio" name="gender" value="Laki-Laki" required /> Laki-Laki
-            <input type="radio" name="gender" value="Perempuan" /> Perempuan
-          </label><br />
-          <label>Pesan: <br />
-            <textarea id="message" required></textarea>
-          </label><br />
-          <button type="submit">Submit</button>
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-10 px-6">
+      <h2 class="text-xl font-bold mb-4 text-center text-red-600">Produk Kita</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <img src="assets/images/Strawberry.jpg" alt="Strawberry" class="mb-2 w-full rounded" />
+        <img src="assets/images/Pineapple.jpg" alt="Pineapple" class="mb-2 w-full rounded" />
+        <img src="assets/images/Sugar Apple.jpg" alt="Sugar Apple" class="mb-2 w-full rounded" />
+    </div>
+    </section>
+
+    <!-- Message Us -->
+    <section id="message" class="bg-gray-50 py-10 px-6">
+      <h2 class="text-xl font-bold mb-4 text-center text-red-600">Kirim Pesan</h2>
+      <div class="flex flex-col md:flex-row gap-6">
+        <form id="messageForm" class="flex flex-col gap-3 md:w-1/2">
+          <label>
+            Nama:
+            <input type="text" name="name" required class="w-full border px-3 py-2 rounded" />
+          </label>
+          <label>
+            Tanggal Lahir:
+            <input type="date" name="birthdate" required class="w-full border px-3 py-2 rounded" />
+          </label>
+          <label>Jenis Kelamin:</label>
+          <div class="flex gap-4 text-sm">
+            <label><input type="radio" name="gender" value="Laki-Laki" /> Laki-Laki</label>
+            <label><input type="radio" name="gender" value="Perempuan" /> Perempuan</label>
+          </div>
+          <label>
+            Pesan:
+            <textarea name="message" rows="4" required class="w-full border px-3 py-2 rounded"></textarea>
+          </label>
+          <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded">
+            Submit
+          </button>
         </form>
-      </div>
-      <div class="output" id="outputBox">
-        <!-- Hasil submit akan muncul di sini -->
+
+        <div id="infoBox" class="border p-4 rounded md:w-1/2 bg-white text-sm leading-relaxed">
+          <div class="mb-2 font-bold">Current time :</div>
+          <div id="currentTime" class="mb-4">Loading...</div>
+          <div>
+            <b>Nama:</b> - <br />
+            <b>Tanggal Lahir:</b> - <br />
+            <b>Jenis Kelamin:</b> - <br />
+            <b>Pesan:</b> -
+          </div>
+        </div>
       </div>
     </section>
-  </main>
 
-  <footer>
-    Created By Deri Muhammad Khasani
+    <!-- Footer -->
+    <footer class="text-m text-right py-4 border-t border-gray-200 text-black
+    -600"> Created by Dementorreto, inspired by kak Keyla, maaf nyontek codingannya xD.
+    
   </footer>
+  </div>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
-</html>
+</html>a
